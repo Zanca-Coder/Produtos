@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $descricao = $_POST['descricao'];
         $preco = $_POST['preco'];
         $familia = $_POST['familia'];
-        $sql = "INSERT INTO produtos (referencia, descricao, preco, familia) VALUES ($referencia, $descricao, $preco, $familia)";
+        $sql = "INSERT INTO produtos (referencia, descricao, preco, familia) VALUES ('$referencia', '$descricao', '$preco', '$familia')";
         $conn->query($sql);
     }
     if ($action == "update") {
